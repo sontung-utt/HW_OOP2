@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj = {
+        //     name: "Tùng",
+        //     age: 18
+        // }
+        class Person {
+            name;//Thuộc tính
+            age;
+            id;
+            constructor(nameInput, ageInput, idInput){//Hàm tạo: Sử dụng để tạo đối tượng
+                this.name = nameInput;
+                this.age = ageInput;
+                this.id = idInput;
+            }
+
+            go(){
+                alert("Go go");
+            }
+
+            showName(){
+                alert("Tên là: " + this.name);
+            }
+        }
+
+        let person = new Person("Tùng",21,41120);//Tạo đối tượng cụ thể cho lớp Person
+        console.log(person.name);//Truy xuất thuộc tính name của đối tượng person
+        person.name = "Nga";
+        console.log("Tên sau sửa: " + person.name);
+        person.go();//Truy xuất phương thức go của đối tượng person
+        person.showName();
+    </script>
+</body>
+</html>
